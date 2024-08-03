@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: normal;
+}
+
+/* We will only use this container to give padding to the content when we enter the mobile viewport */
+.mobile-content-container {
+    margin: 0;
+}
+
+/* Make the background color for the body element peach */
+body {
+    background-color: hsl(30, 54%, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make the white box the contains all the content */
+.recipe-main {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+    max-width: 700px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+}
+
+/* Create a margin around the content inside of the primary content box */
+.content-container {
+    margin: 35px;
+}
+
+/* Image Styling -----------------------------------------------------------------*/
+.primary-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Primary Heading Styling -----------------------------------------------------------------*/
+.primary-heading {
+    padding: 18px 0 15px 0;
+    font-family: "Young Serif", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: hsl(24, 5%, 18%) ;
+}
+
+/* Primary Subheading Styling -----------------------------------------------------------------*/
+.primary-subheading {
+    font-family: "Outfit", sans-serif;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+}
+
+/* Styling the PrepTime Section -----------------------------------------------------------------*/
+.preptime {
+    background-color: hsl(330, 100%, 98%);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.preptime h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+}
+
+.preptime ul {
+    font-family: "Outfit", sans-serif;
+    padding: 10px 20px 0 30px;
+    list-style-position: outside;
+}
+
+.preptime ul li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+.preptime ul li {
+    padding: 5px 0 5px 20px;
+    color: hsl(30, 10%, 34%);
+}
+
+.preptime span {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    color: hsl(24, 5%, 18%) ;
+}
+
+/* Styling the Ingredients Section ----------------------------------------------------------------- */
+.ingredients {
+    padding: 25px 0;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.ingredients h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif", sans-serif;
+}
+
+.ingredients ul {
+    font-family: "Outfit", sans-serif;
+    padding: 10px 20px 0 25px;
+}
+
+.ingredients ul li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+.ingredients ul li {
+    padding: 5px 0 5px 20px;
+    color: hsl(30, 10%, 34%);
+}
+
+/* Styling the Instructions Section ----------------------------------------------------------------- */
+
+.Instructions {
+    padding: 25px 0;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.Instructions h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif", sans-serif;
+}
+
+.Instructions ol {
+    font-family: "Outfit", sans-serif;
+    padding: 10px 20px 0 23px;
+}
+
+.Instructions ol li::marker {
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+}
+
+.Instructions ol li {
+    padding: 5px 0 5px 10px;
+    color: hsl(30, 10%, 34%);
+}
+
+.Instructions ol li span {
+    color: hsl(24, 5%, 18%);
+    font-weight: 600;
+}
+
+/* Styling the table ----------------------------------------------------------------- */
+
+.nutrition-table {
+    padding-top: 25px;
+}
+
+.nutrition-table h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif", sans-serif;
+}
+
+.nutrition-table p {
+    font-family: "Outfit", sans-serif;
+    padding: 18px 0;
+    color: hsl(30, 10%, 34%);
+}
+
+.nutrition-table table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders collapse (There are no gaps between the td borders)*/
+}
+
+.nutrition-table table tr {
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition-table table td {
+    font-family: "Outfit", sans-serif;
+    padding-left: 30px;
+}
+
+.table-has_underline {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+} 
+
+.table-data {
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+    
+}
+
+.not-table-data {
+    color: hsl(30, 10%, 34%);
+}
+
+.border-bottom {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+/* **************************************************** Mobile Integration **************************************************** */
+
+@media screen and (max-width: 480px) {
+    .recipe-main {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 0px;
+    }
+
+    /* Remove the desktop containers margin and add that margin to the mobile container */
+    .content-container {
+        margin: 0px;
+    }
+
+    .mobile-content-container {
+        margin: 0 35px 0 35px;
+    }
+
+    /* Image Styling */
+    .primary-image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+}
