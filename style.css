@@ -176,17 +176,12 @@ body {
 .nutrition-table table tr {
     width: 100%;
     height: 35px;
-    border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 
 .nutrition-table table td {
     font-family: "Outfit", sans-serif;
     padding-left: 30px;
 }
-
-.table-has_underline {
-    border-bottom: 1px solid hsl(30, 18%, 87%);
-} 
 
 .table-data {
     font-weight: 700;
@@ -228,5 +223,10 @@ body {
         max-width: 100%;
         height: auto;
         border-radius: 0px;
+    }
+
+    /* Table Styling */
+    .nutrition-table {
+        padding: 25px 0;
     }
 }
